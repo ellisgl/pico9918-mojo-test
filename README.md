@@ -169,6 +169,6 @@ To change the text, colours or VRAM layout, edit `tools/gen_init_rom.py`. It als
 | `rtl/tms_bus.v` | TMS9918A bus master (one read or write per request) |
 | `rtl/debug_uart.v` | Serial debug report through the Mojo's AVR (500 kbaud) |
 | `rtl/init_rom.hex`, `rtl/layout.vh` | Generated init script and VRAM addresses |
-| `tools/gen_init_rom.py`, `tools/font.png` | ROM generator; font copied from PICO9918 (MIT) |
+| `tools/gen_init_rom.py`, `tools/font.png` | ROM generator; font copied from PICO9918 (MIT, see `tools/font.png.LICENSE`) |
 | `sim/vdp_model.v`, `sim/tb_top.v` | Bus model with protocol checks, testbench |
 | `mojo-v3.ucf` | Pin constraints |
