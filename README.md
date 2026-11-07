@@ -172,3 +172,9 @@ To change the text, colours or VRAM layout, edit `tools/gen_init_rom.py`. It als
 | `tools/gen_init_rom.py`, `tools/font.png` | ROM generator; font copied from PICO9918 (MIT, see `tools/font.png.LICENSE`) |
 | `sim/vdp_model.v`, `sim/tb_top.v` | Bus model with protocol checks, testbench |
 | `mojo-v3.ucf` | Pin constraints |
+
+## License
+
+BSD 3-Clause, see [`LICENSE`](LICENSE). The exception is `tools/font.png`, which comes from
+[PICO9918](https://github.com/visrealm/pico9918) under the MIT License
+(see [`tools/font.png.LICENSE`](tools/font.png.LICENSE)).
