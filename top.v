@@ -31,7 +31,7 @@ module top #(
     parameter POLL_CYCLES  = 50_000,       // 1 ms status poll while waiting
     parameter REPORT_CYCLES = 12_500_000,  // serial report every 250 ms
     parameter DIAG_CYCLES  = 5_000_000,    // F18A SR1/SR4/SR5 read every 100 ms
-    parameter DIAG_ENABLE  = 0,            // 1: unlock F18A, read SR1/SR4/SR5 (boot-trace firmware; stops /INT after a few frames)
+    parameter DIAG_ENABLE  = 0,            // 1: unlock F18A, read SR1/SR4/SR5 every DIAG_CYCLES (for boot-trace firmware)
     parameter T_GAP        = 100           // 2 us between bus accesses
 ) (
     input  wire       clk,       // 50 MHz

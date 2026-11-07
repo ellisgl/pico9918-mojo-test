@@ -118,8 +118,9 @@ python3 -c "import serial; p=serial.Serial('/dev/ttyACM0'); [print(p.readline().
 With `DIAG_ENABLE=1` the FPGA unlocks F18A mode every 100 ms and reads SR1 (ID, `E8`),
 SR4 and SR5. With the PICO9918 firmware built with `-DPICO9918_BOOT_TRACE=ON`, SR4 is the
 core 0 start-up stage (`23` = reached the main loop, bit 7 = hard fault) and SR5 the DVI
-line-interrupt count (it should change between reports). Leave it off normally: on
-hardware, /INT stopped a few frames after the unlock.
+line-interrupt count (it should change between reports). It's off by default because it
+puts the VDP in F18A mode, which a plain TMS9918A test doesn't need. With it on, /INT ran
+for 3,600+ frames with no dropouts.
 
 ```bash
 EXTRA_GENERICS='DIAG_ENABLE=1' ./build.sh
