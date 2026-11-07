@@ -1,0 +1,9 @@
+# ISE build output (./build.sh)
+build/
+build.log
+
+# Simulation output
+sim/*.vvp
+*.vcd
+
+__pycache__/

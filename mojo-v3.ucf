@@ -1,0 +1,36 @@
+# Mojo V3 (XC6SLX9-2TQG144) pins, from the Mojo base project UCF.
+NET "clk"    LOC = P56  | IOSTANDARD = LVTTL;
+NET "rst_n"  LOC = P38  | IOSTANDARD = LVTTL;
+NET "led<0>" LOC = P134 | IOSTANDARD = LVTTL;
+NET "led<1>" LOC = P133 | IOSTANDARD = LVTTL;
+NET "led<2>" LOC = P132 | IOSTANDARD = LVTTL;
+NET "led<3>" LOC = P131 | IOSTANDARD = LVTTL;
+NET "led<4>" LOC = P127 | IOSTANDARD = LVTTL;
+NET "led<5>" LOC = P126 | IOSTANDARD = LVTTL;
+NET "led<6>" LOC = P124 | IOSTANDARD = LVTTL;
+NET "led<7>" LOC = P123 | IOSTANDARD = LVTTL;
+NET "CD<7>"  LOC = P1   | IOSTANDARD = LVTTL;
+NET "CD<6>"  LOC = P2   | IOSTANDARD = LVTTL;
+NET "CD<5>"  LOC = P5   | IOSTANDARD = LVTTL;
+NET "CD<4>"  LOC = P6   | IOSTANDARD = LVTTL;
+NET "CD<3>"  LOC = P7   | IOSTANDARD = LVTTL;
+NET "CD<2>"  LOC = P8   | IOSTANDARD = LVTTL;
+NET "CD<1>"  LOC = P9   | IOSTANDARD = LVTTL;
+NET "CD<0>"  LOC = P10   | IOSTANDARD = LVTTL;
+NET "MODE"   LOC = P11   | IOSTANDARD = LVTTL;
+NET "nCSR"   LOC = P12  | IOSTANDARD = LVTTL;
+NET "nCSW"   LOC = P14  | IOSTANDARD = LVTTL;
+NET "nINT"   LOC = P15  | IOSTANDARD = LVTTL | PULLUP;   # idle high if the PiZero is unplugged
+NET "RESET"  LOC = P16  | IOSTANDARD = LVTTL;            # active low
+NET "GCLK"   LOC = P17  | IOSTANDARD = LVTTL;
+NET "CCLK"   LOC = P21  | IOSTANDARD = LVTTL;
+#NET "MODE1"  LOC = P22  | IOSTANDARD = LVTTL;
+
+# Mojo AVR serial bridge (debug reports on /dev/ttyACM0)
+NET "avr_cclk"    LOC = P70 | IOSTANDARD = LVTTL;
+NET "avr_rx"      LOC = P59 | IOSTANDARD = LVTTL;
+NET "avr_rx_busy" LOC = P39 | IOSTANDARD = LVTTL;
+
+# The 50 MHz board clock (the placer and timing report use it).
+NET "clk" TNM_NET = clk;
+TIMESPEC TS_clk = PERIOD "clk" 50 MHz HIGH 50%;
